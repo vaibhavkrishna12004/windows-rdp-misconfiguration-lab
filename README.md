@@ -37,7 +37,7 @@ It helps identify active hosts, open ports, and services to understand potential
 
 Performed a ping scan to identify live hosts:
 
-nmap -sn < "target-IP" > helps us identify which systems on the network are active.
+nmap -sn < "Target-IP" > helps us identify which systems on the network are active.
 <img width="1920" height="1080" alt="Nmap -sn " src="https://github.com/user-attachments/assets/3589bf13-2b8e-4a28-82ad-c1a1896c0194" />
 
 
@@ -51,7 +51,7 @@ Port Scanning
 Port scanning identifies open ports and detects services running on them.
 This helps determine potential entry points and technologies used by the target system.
 
-nmap -sV -sC <target-IP> this Identifies open ports, detects the services running on those ports and gathers additiona information.
+nmap -sV -sC < "Target-IP" > this Identifies open ports, detects the services running on those ports and gathers additiona information.
 <img width="1920" height="1080" alt="Nmap -sV -sC" src="https://github.com/user-attachments/assets/0717665f-b384-4287-889c-4c24fd9aaf89" />
 
 - Port 3389 (RDP) open
@@ -80,14 +80,14 @@ It helps identify misconfigured shares or unauthorized access possibilities.
 
 Checked for anonymous access and shares:
 
-smbclient -L //<target-ip>his helps us identify shared folders and check if anonymous access id allowed, (sometimes it is).
+smbclient -L // < "Target-IP" > his helps us identify shared folders and check if anonymous access id allowed, (sometimes it is).
 <img width="1920" height="1045" alt="smb guest login" src="https://github.com/user-attachments/assets/e229697c-81bd-4544-8720-63b8da4f35d9" />
 
 
 Attempted further enumeration using: Advanced SMB enumeration gathers detailed information such as users, groups, and system data.
 It is used to identify valid usernames and potential attack vectors within SMB services.
 
-enum4linux <target-ip> This gathers details such as users, shares, groups, and system information crucial for attack.
+enum4linux < "Target-IP" > This gathers details such as users, shares, groups, and system information crucial for attack.
 <img width="1920" height="1045" alt="smbclient and enumlinux" src="https://github.com/user-attachments/assets/78ddce90-256f-4cf9-a0c2-cca5d1fffcb4" />
 
 
@@ -100,7 +100,7 @@ Directory Bruteforcing
 Directory brute forcing is used to discover hidden files and directories on a web server.
 It helps uncover sensitive endpoints like admin panels or backup files.
 
-dirb http://<target-ip> This helps identify hidden directories and files that are not directly accessible through the website.
+dirb http:// < "Target-IP" > This helps identify hidden directories and files that are not directly accessible through the website.
 <img width="1920" height="1045" alt="dirb check" src="https://github.com/user-attachments/assets/29becce8-5b0e-422e-be11-8a65b83ad638" />
 
 
@@ -117,7 +117,7 @@ Remote Desktop Protocol Login Attempt
 Used RDP client to attempt login: RDP access allows remote login to a system using the Remote Desktop Protocol.
 It can lead to full system control if valid credentials are obtained.
 
-xfreerdp /u:steven /p:steven /v:<target-ip> this gained us login through the port 3389 with the help of weak credentials of the user.
+xfreerdp /u:steven /p:steven /v: < "Target-IP" > this gained us login through the port 3389 with the help of weak credentials of the user.
 <img width="1920" height="1045" alt="xfreerdp1" src="https://github.com/user-attachments/assets/634ef28f-76e9-4506-bb58-52fe9c752a02" />
 
 The port gave us full access to the system.
