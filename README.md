@@ -37,7 +37,7 @@ It helps identify active hosts, open ports, and services to understand potential
 
 Performed a ping scan to identify live hosts:
 
-nmap -sn <target-IP> helps us identify which systems on the network are active.
+nmap -sn < "target-IP" > helps us identify which systems on the network are active.
 <img width="1920" height="1080" alt="Nmap -sn " src="https://github.com/user-attachments/assets/3589bf13-2b8e-4a28-82ad-c1a1896c0194" />
 
 
