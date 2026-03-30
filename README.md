@@ -46,7 +46,7 @@ Port Scanning
 Identified open ports and services:
 
 nmap -sV -sC <target-ip>
-
+KALI Windows 10/Nmap -sV -sC.png
 
 Findings:
 
