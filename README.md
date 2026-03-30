@@ -26,11 +26,14 @@ The objective of this project was to simulate a real-world penetration testing s
 
   
 
-STEP 1
+
 
 Reconnaissance
 
-Network Discovery
+
+Reconnaissance is the initial phase of a penetration test where information about the target system or network is gathered.
+It helps identify active hosts, open ports, and services to understand potential attack surfaces
+
 
 Performed a ping scan to identify live hosts:
 
@@ -40,12 +43,13 @@ nmap -sn <target-IP> helps us identify which systems on the network are active.
 
 
 
-STEP 2
+
 
 
 Port Scanning
 
-Identified open ports and services:
+Port scanning identifies open ports and detects services running on them.
+This helps determine potential entry points and technologies used by the target system.
 
 nmap -sV -sC <target-IP> this Identifies open ports, detects the services running on those ports and gathers additiona information.
 <img width="1920" height="1080" alt="Nmap -sV -sC" src="https://github.com/user-attachments/assets/0717665f-b384-4287-889c-4c24fd9aaf89" />
@@ -65,12 +69,14 @@ Perfomed a quick check of the IP over a search engine
 
 
 
-STEP 3
+
 
 
 Enumeration
 
-SMB Enumeration
+SMB enumeration involves listing shared resources available on a target system.
+It helps identify misconfigured shares or unauthorized access possibilities.
+
 
 Checked for anonymous access and shares:
 
@@ -78,7 +84,8 @@ smbclient -L //<target-ip>his helps us identify shared folders and check if anon
 <img width="1920" height="1045" alt="smb guest login" src="https://github.com/user-attachments/assets/e229697c-81bd-4544-8720-63b8da4f35d9" />
 
 
-Attempted further enumeration using:
+Attempted further enumeration using: Advanced SMB enumeration gathers detailed information such as users, groups, and system data.
+It is used to identify valid usernames and potential attack vectors within SMB services.
 
 enum4linux <target-ip> This gathers details such as users, shares, groups, and system information crucial for attack.
 <img width="1920" height="1045" alt="smbclient and enumlinux" src="https://github.com/user-attachments/assets/78ddce90-256f-4cf9-a0c2-cca5d1fffcb4" />
@@ -86,11 +93,12 @@ enum4linux <target-ip> This gathers details such as users, shares, groups, and s
 
 
 
-STEP 4
+
 
 Directory Bruteforcing
 
-Tested for web directories (if applicable):
+Directory brute forcing is used to discover hidden files and directories on a web server.
+It helps uncover sensitive endpoints like admin panels or backup files.
 
 dirb http://<target-ip> This helps identify hidden directories and files that are not directly accessible through the website.
 <img width="1920" height="1045" alt="dirb check" src="https://github.com/user-attachments/assets/29becce8-5b0e-422e-be11-8a65b83ad638" />
@@ -100,13 +108,14 @@ dirb http://<target-ip> This helps identify hidden directories and files that ar
 
 
 
-STEP 5
+
 
 Initial Access
 
 Remote Desktop Protocol Login Attempt
 
-Used RDP client to attempt login:
+Used RDP client to attempt login: RDP access allows remote login to a system using the Remote Desktop Protocol.
+It can lead to full system control if valid credentials are obtained.
 
 xfreerdp /u:steven /p:steven /v:<target-ip> this gained us login through the port 3389 with the help of weak credentials of the user.
 <img width="1920" height="1045" alt="xfreerdp1" src="https://github.com/user-attachments/assets/634ef28f-76e9-4506-bb58-52fe9c752a02" />
@@ -166,3 +175,15 @@ This lab highlights how:
 - Misconfigurations are often more dangerous than complex vulnerabilities
 - Weak credentials remain a major security risk
 - Proper enumeration is critical in penetration testing
+
+
+
+Conclusion
+
+This assessment demonstrated how exposed services such as SMB and RDP
+can be analyzed for potential vulnerabilities.
+
+While SMB enumeration did not reveal misconfigurations, weak credentials
+allowed successful access via RDP, highlighting the risk of poor authentication practices.
+
+This emphasizes the importance of strong password policies and restricted remote access.
