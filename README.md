@@ -35,6 +35,12 @@ Network Discovery
 Performed a ping scan to identify live hosts:
 
 nmap -sn <target-range>
+<img width="1920" height="1080" alt="Nmap -sn " src="https://github.com/user-attachments/assets/3589bf13-2b8e-4a28-82ad-c1a1896c0194" />
+
+HTTP LOGIN
+
+Perfomed a quick check of the IP over a search engine
+<img width="1922" height="1047" alt="Http login check" src="https://github.com/user-attachments/assets/fe6bd490-9b2a-4b86-a43c-d745078c47cc" />
 
 
 
@@ -46,7 +52,9 @@ Port Scanning
 Identified open ports and services:
 
 nmap -sV -sC <target-ip>
-KALI Windows 10/Nmap -sV -sC.png
+<img width="1920" height="1080" alt="Nmap -sV -sC" src="https://github.com/user-attachments/assets/0717665f-b384-4287-889c-4c24fd9aaf89" />
+
+
 
 Findings:
 
@@ -64,11 +72,13 @@ SMB Enumeration
 Checked for anonymous access and shares:
 
 smbclient -L //<target-ip>
+<img width="1920" height="1045" alt="smb guest login" src="https://github.com/user-attachments/assets/e229697c-81bd-4544-8720-63b8da4f35d9" />
 
 
 Attempted further enumeration using:
 
 enum4linux <target-ip>
+<img width="1920" height="1045" alt="smbclient and enumlinux" src="https://github.com/user-attachments/assets/78ddce90-256f-4cf9-a0c2-cca5d1fffcb4" />
 
 
 STEP 4
@@ -78,6 +88,7 @@ Directory Bruteforcing
 Tested for web directories (if applicable):
 
 dirb http://<target-ip>
+<img width="1920" height="1045" alt="dirb check" src="https://github.com/user-attachments/assets/29becce8-5b0e-422e-be11-8a65b83ad638" />
 
 
 
@@ -91,6 +102,7 @@ RDP Login Attempt
 Used RDP client to attempt login:
 
 xfreerdp /u:steven /p:steven /v:<target-ip>
+<img width="1920" height="1045" alt="xfreerdp1" src="https://github.com/user-attachments/assets/634ef28f-76e9-4506-bb58-52fe9c752a02" />
 
 
 
