@@ -35,7 +35,7 @@ Network Discovery
 Performed a ping scan to identify live hosts:
 
 nmap -sn <target-range>
-https://github.com/vaibhavkrishna12004/windows-rdp-misconfiguration-lab/commit/e125700b654a1bfd81aaf02c8bf1f12e91ec5e22
+
 
 
 STEP 2
@@ -46,7 +46,7 @@ Port Scanning
 Identified open ports and services:
 
 nmap -sV -sC <target-ip>
-https://github.com/vaibhavkrishna12004/windows-rdp-misconfiguration-lab/commit/e125700b654a1bfd81aaf02c8bf1f12e91ec5e22#diff-9fae3f3df3f5d66fa47e596e15b1348e0d7e21ae977ae13c6e8e916e1a4bac53
+
 
 Findings:
 
@@ -64,12 +64,11 @@ SMB Enumeration
 Checked for anonymous access and shares:
 
 smbclient -L //<target-ip>
-https://github.com/vaibhavkrishna12004/windows-rdp-misconfiguration-lab/commit/e125700b654a1bfd81aaf02c8bf1f12e91ec5e22#diff-9fae3f3df3f5d66fa47e596e15b1348e0d7e21ae977ae13c6e8e916e1a4bac53
+
 
 Attempted further enumeration using:
 
 enum4linux <target-ip>
-https://github.com/vaibhavkrishna12004/windows-rdp-misconfiguration-lab/commit/e125700b654a1bfd81aaf02c8bf1f12e91ec5e22#diff-ac9af51bd54a562a6a81b1556f41d70e9c10839f92ff7b5495a06712e9e415c9
 
 
 STEP 4
@@ -79,7 +78,7 @@ Directory Bruteforcing
 Tested for web directories (if applicable):
 
 dirb http://<target-ip>
-https://github.com/vaibhavkrishna12004/windows-rdp-misconfiguration-lab/commit/e125700b654a1bfd81aaf02c8bf1f12e91ec5e22#diff-0d0d625350a8bf81ce85c2fb0815458119367f11bd73dad60fe4a3ef93fd5860
+
 
 
 
@@ -92,7 +91,7 @@ RDP Login Attempt
 Used RDP client to attempt login:
 
 xfreerdp /u:steven /p:steven /v:<target-ip>
-https://github.com/vaibhavkrishna12004/windows-rdp-misconfiguration-lab/commit/e125700b654a1bfd81aaf02c8bf1f12e91ec5e22#diff-6293ea7128eef25fa8d5391ae74cfb811adaed7420e59683ad1b7cb6cc38d8a6
+
 
 
  Successfully gained access using weak credentials.
