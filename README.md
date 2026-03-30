@@ -32,7 +32,7 @@ Network Discovery
 Performed a ping scan to identify live hosts:
 
 nmap -sn <target-range>
-
+https://github.com/vaibhavkrishna12004/windows-rdp-misconfiguration-lab/commit/e125700b654a1bfd81aaf02c8bf1f12e91ec5e22
 
 
 Port Scanning
